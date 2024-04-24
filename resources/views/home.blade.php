@@ -5,16 +5,18 @@
 @endif --}}
 
 
-{{-- @for ($i = 0; $i < count($data); $i++)
-    <ul>
-        <li>{{ $data[$i] }}</li>
-    </ul>
-@endfor --}}
 
 @extends('layouts.main')
 
+@section('title', 'home page')
+
 @section('main-section')
     <h1>home page!</h1>
+    @for ($i = 0; $i < count($data); $i++)
+        <ul>
+            <li>{{ $data[$i] }}</li>
+        </ul>
+    @endfor
 @endsection
 
 {{-- 

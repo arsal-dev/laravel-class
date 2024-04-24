@@ -1,17 +1,10 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-// get, post, put, patch, delete
 
-Route::get('/', function () {
-    $languages = ['html', 'css', 'javascript', 'php', 'mysql', 'laravel'];
-
-    // dd($languages);
-
-    return view('home', ['name' => 'Ahmed', 'data' => $languages]);
-})->name('home');
-
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/contact', [ContactController::class, 'submit'])->name('contactSubmit');

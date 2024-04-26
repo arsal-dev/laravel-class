@@ -10,4 +10,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contactSubmit');
 
-Route::resource('test', TestController::class);
+Route::get('get-contacts', [ContactController::class, 'get'])->name('allContacts');
+
+Route::get('insert-contacts', [ContactController::class, 'insert'])->name('insertContacts');

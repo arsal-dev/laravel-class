@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Contact;
+use App\Models\Student;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -21,12 +21,6 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Contact::factory(50)->create();
-
-        // for ($i = 0; $i < 10; $i++) {
-        //     $this->call([
-        //         ContactSeeder::class
-        //     ]);
-        // }
+        Student::factory(10)->create();
     }
 }
